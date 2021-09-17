@@ -12,7 +12,7 @@ import { ContactComponent } from './modules/pages/contact/contact.component';
 import { AboutUsComponent } from './modules/pages/about-us/about-us.component';
 import { ActionLinesComponent } from './modules/pages/action-lines/action-lines.component';
 import { JobsComponent } from './modules/pages/jobs/jobs.component';
-//import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,8 @@ import { JobsComponent } from './modules/pages/jobs/jobs.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

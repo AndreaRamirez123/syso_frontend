@@ -74,6 +74,23 @@
                     <div class="col-xs-12">
                         <label class="section-title">NUESTRAS ALIANZAS ESTATÉGICAS HACEN QUE NUESTRO TRABAJO Y NUESTROS SERVICIOS TENGAN LOS MÁS ALTOS INDICES DE CALIDAD.</label>
                     </div>
+                    <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig" 
+                        (init)="slickInit($event)"
+                        (breakpoint)="breakpoint($event)"
+                        (afterChange)="afterChange($event)"
+                        (beforeChange)="beforeChange($event)"
+                        style="background-color: #fff;">
+                        <div ngxSlickItem *ngFor="let slide of slides" class="slide" 
+                        style="background-color: #fff;">
+                            <img src="{{ slide.img }}" alt="" style="width: 180px;height: 180px;">
+                        </div>
+                    </ngx-slick-carousel>
+                    <!--<button (click)="addSlide()">Add</button>
+                    <button (click)="removeSlide()">Remove</button>
+                    <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+                    <button (click)="slickModal.unslick()">unslick</button>-->
                 </section>
 
             </div>

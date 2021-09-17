@@ -74,6 +74,20 @@
     color: red !important;
 }
 
+.slick-slider {
+    width: 88%;
+    margin: auto;
+    background: rgb(14, 13, 13);
+}
+  
+body .slick-prev, 
+body .slick-next {
+    height: 45px;
+    width: 40px;
+    background: #ccc !important;
+    z-index: 100;
+}
+
 /*Estilos de pagina*/
 
 .section-information {
