@@ -1,0 +1,14 @@
+.header-container {
+    width: 100%;
+    padding: 10px;
+}
+
+ul li{
+    float: left;
+    list-style: none;
+}
+
+ul li a{
+    text-decoration: none;
+    margin: 10px;
+}

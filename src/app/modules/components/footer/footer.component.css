@@ -1,0 +1,17 @@
+.footer-container {
+    background-color: #0D3F92;
+    color: #FFFFFF;
+    margin-top: 50px;
+    padding: 100px 10px 100px 10px;
+}
+
+.social-media-container {
+    text-align: center;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.social-media-container a {
+    margin: 15px;
+    color: #FFFFFF;
+}
