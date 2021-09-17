@@ -13,6 +13,7 @@ import { AboutUsComponent } from './modules/pages/about-us/about-us.component';
 import { ActionLinesComponent } from './modules/pages/action-lines/action-lines.component';
 import { JobsComponent } from './modules/pages/jobs/jobs.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { LoginComponent } from './modules/pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     ContactComponent,
     AboutUsComponent,
     ActionLinesComponent,
-    JobsComponent
+    JobsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

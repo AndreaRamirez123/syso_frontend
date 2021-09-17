@@ -6,6 +6,7 @@ import { BlogComponent } from './modules/pages/blog/blog.component';
 import { ContactComponent } from './modules/pages/contact/contact.component';
 import { HomeComponent } from './modules/pages/home/home.component';
 import { JobsComponent } from './modules/pages/jobs/jobs.component';
+import { LoginComponent } from './modules/pages/login/login.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 

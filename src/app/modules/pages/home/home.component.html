@@ -82,9 +82,9 @@
                         (afterChange)="afterChange($event)"
                         (beforeChange)="beforeChange($event)"
                         style="background-color: #fff;">
-                        <div ngxSlickItem *ngFor="let slide of slides" class="slide" 
-                        style="background-color: #fff;">
-                            <img src="{{ slide.img }}" alt="" style="width: 180px;height: 180px;">
+                        
+                        <div ngxSlickItem *ngFor="let slide of slides" class="slide" style="background-color: #fff;">
+                            <img src="{{ slide.img }}" alt="" style="width: 200px;height: 200px;margin: auto;">
                         </div>
                     </ngx-slick-carousel>
                     <!--<button (click)="addSlide()">Add</button>
