@@ -13,7 +13,7 @@ export class StorageService {
   }
 
   getItem(key:string) {
-    return sessionStorage.getItem(btoa(key)) ? this.textDecrypt(sessionStorage.getItem(btoa(key))) : '{}';
+    return sessionStorage.getItem(btoa(key)) ? this.textDecrypt(sessionStorage.getItem(btoa(key))) : '[]';
   }
 
   textEncryt(text: any) {

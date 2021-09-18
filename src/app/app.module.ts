@@ -22,6 +22,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ApplicationHomeComponent } from './modules/private/home/home.component';
 import { RenderMenuComponent } from './modules/components/render-menu/render-menu.component';
+import { RisksComponent } from './modules/private/risks/risks.component';
+import { UsersComponent } from './modules/private/users/users.component';
+import { CanActivateViaAuthGuard } from './modules/guards/AuthGuard';
+import { UserProfileComponent } from './modules/private/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,10 @@ import { RenderMenuComponent } from './modules/components/render-menu/render-men
     ForumComponent,
     NewsComponent,
     ApplicationHomeComponent,
-    RenderMenuComponent
+    RenderMenuComponent,
+    RisksComponent,
+    UsersComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +57,9 @@ import { RenderMenuComponent } from './modules/components/render-menu/render-men
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    CanActivateViaAuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
