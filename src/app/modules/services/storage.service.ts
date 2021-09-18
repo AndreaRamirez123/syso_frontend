@@ -9,7 +9,7 @@ export class StorageService {
 
   setItem(key:string, val:string | [] | object) {
     const value = (typeof val === 'object') ? JSON.stringify(val) : val;
-    sessionStorage.setItem(btoa(key), value);
+    sessionStorage.setItem(btoa(key), this.textEncryt(value));
   }
 
   getItem(key:string) {

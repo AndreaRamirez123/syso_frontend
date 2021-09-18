@@ -20,6 +20,7 @@ import { ForumComponent } from './modules/private/forum/forum.component';
 import { NewsComponent } from './modules/private/news/news.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ApplicationHomeComponent } from './modules/private/home/home.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     WebComponent,
     ApplicationComponent,
     ForumComponent,
-    NewsComponent
+    NewsComponent,
+    ApplicationHomeComponent
   ],
   imports: [
     BrowserModule,
