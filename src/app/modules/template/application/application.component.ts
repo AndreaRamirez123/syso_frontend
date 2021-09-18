@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SS_LOGIN, SS_USER_INFO } from '../../config/storage-keys';
+import { SS_USER_INFO } from '../../config/storage-keys';
 import { UserInfo } from '../../models/UserInfo';
 import { AuthenticationService } from '../../services/authentication.service';
 import { StorageService } from '../../services/storage.service';

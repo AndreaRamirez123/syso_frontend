@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AuthenticationService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   searchUser(email:string, password:string) {
     const body = {

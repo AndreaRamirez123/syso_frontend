@@ -1,1 +1,53 @@
-<p>risks works!</p>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top:30px;">
+            <h2>Riesgos</h2>
+            <p>
+                En esta sección podrá realizar el registro de riesgos para posteriormente crear los foros de discusión.
+            </p>
+            <hr>
+            <button class="btn btn-secondary" (click)="toggleForm()">
+                <i class="fas fa-plus"></i> Nuevo
+            </button>
+            <hr>
+            <div [style.display]="showForm">
+                <p>Ingrese la información del riesgo a registrar</p>
+                <form class="row" [formGroup]="form" (ngSubmit)="submit()">
+                    <div class="col-xs-12 col-md-12">
+                        <label for="name">Nombre del riesgo</label><br>
+                        <input type="text" class="form-control" formControlName="name">
+                    </div>
+                    <div class="col-xs-12 col-md-12">
+                        <label for="email">Descripción</label><br>
+                        <textarea class="form-control" formControlName="description" rows="5"></textarea>
+                    </div>
+                    <div class="col-xs-12 col-md-12">
+                        <hr>
+                        <button class="btn btn-primary btn-block" [disabled]="!this.form.valid">
+                            <i class="fas fa-save"></i> Guardar riesgo
+                        </button>
+                    </div>
+                </form>
+                <hr>
+            </div>
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Fecha registro</th>
+                    <th>Estado</th>
+                </thead>
+                <tbody *ngFor="let item of risksList">
+                    <tr>
+                        <td>{{item.risk_id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.description}}</td>
+                        <td>{{item.created_date}}</td>
+                        <td>{{item.status}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
