@@ -16,4 +16,11 @@ export class AuthenticationService {
     }
     return this.http.post(`${environment.sysoApi}/search-user`,body);
   }
+
+  getMenuByProfileId(profileId: number) {
+    const body = {
+      profileId
+    }
+    return this.http.post(`${environment.sysoApi}/get-menu-by-profile-id`,body);
+  }
 }

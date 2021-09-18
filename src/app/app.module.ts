@@ -21,6 +21,7 @@ import { NewsComponent } from './modules/private/news/news.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ApplicationHomeComponent } from './modules/private/home/home.component';
+import { RenderMenuComponent } from './modules/components/render-menu/render-menu.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ApplicationHomeComponent } from './modules/private/home/home.component'
     ApplicationComponent,
     ForumComponent,
     NewsComponent,
-    ApplicationHomeComponent
+    ApplicationHomeComponent,
+    RenderMenuComponent
   ],
   imports: [
     BrowserModule,

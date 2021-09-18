@@ -1,0 +1,11 @@
+<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false"
+*ngFor="let item of navigationMenu">
+            
+    <li class="nav-item">
+        <a [routerLink]="[item.link]" class="nav-link">
+        <i class="nav-icon fas fa-sign-out-alt"></i>
+        <p>{{item.name}}</p>
+        </a>
+    </li>
+
+</ul>
