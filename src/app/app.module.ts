@@ -14,6 +14,12 @@ import { ActionLinesComponent } from './modules/pages/action-lines/action-lines.
 import { JobsComponent } from './modules/pages/jobs/jobs.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { LoginComponent } from './modules/pages/login/login.component';
+import { WebComponent } from './modules/template/web/web.component';
+import { ApplicationComponent } from './modules/template/application/application.component';
+import { ForumComponent } from './modules/private/forum/forum.component';
+import { NewsComponent } from './modules/private/news/news.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,13 +32,19 @@ import { LoginComponent } from './modules/pages/login/login.component';
     AboutUsComponent,
     ActionLinesComponent,
     JobsComponent,
-    LoginComponent
+    LoginComponent,
+    WebComponent,
+    ApplicationComponent,
+    ForumComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
