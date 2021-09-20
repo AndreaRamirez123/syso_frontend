@@ -26,6 +26,7 @@ import { RisksComponent } from './modules/private/risks/risks.component';
 import { UsersComponent } from './modules/private/users/users.component';
 import { CanActivateViaAuthGuard } from './modules/guards/AuthGuard';
 import { UserProfileComponent } from './modules/private/user-profile/user-profile.component';
+import { ForumWebComponent } from './modules/pages/forum-web/forum-web.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { UserProfileComponent } from './modules/private/user-profile/user-profil
     RenderMenuComponent,
     RisksComponent,
     UsersComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    ForumWebComponent
   ],
   imports: [
     BrowserModule,

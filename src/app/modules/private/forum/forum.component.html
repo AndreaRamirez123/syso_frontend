@@ -1,1 +1,59 @@
-<p>forum works!</p>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top:30px;">
+            <h2>Foro</h2>
+            <p>
+                En esta sección podrá realizar la configuración de foros para cada riesgo registrado.
+            </p>
+            <hr>
+            <button class="btn btn-secondary" (click)="toggleForm()">
+                <i class="fas fa-plus"></i> Nuevo
+            </button>
+            <hr>
+            <div [style.display]="showForm">
+                <form class="row" [formGroup]="form" (ngSubmit)="submit()">
+                    <div class="col-xs-12 col-md-6">
+                        <label>Seleccione el riesgo</label><br>
+                        <select type="text" class="form-control" formControlName="risk_id" (change)="selectRisk(this)">
+                            <option *ngFor="let item of risksList" value="{{item.risk_id}}">{{item.name}}</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <label>Asunto</label><br>
+                        <input type="text" class="form-control" [value]="subject" readonly/>
+                    </div>
+                    <div class="col-xs-12 col-md-12">
+                        <label>Descripción</label><br>
+                        <textarea type="text" class="form-control" rows="3" readonly>{{description}}</textarea>
+                    </div>
+                    <div class="col-xs-12 col-md-12">
+                        <hr>
+                        <button class="btn btn-primary btn-block" [disabled]="!this.form.valid">
+                            <i class="fas fa-save"></i> Guardar foro
+                        </button>
+                    </div>
+                </form>
+                <hr>
+            </div>
+
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <th>#</th>
+                    <th>Riesgo</th>
+                    <th>Descripción</th>
+                    <th>Fecha registro</th>
+                    <th>Estado</th>
+                </thead>
+                <tbody *ngFor="let item of forumsList">
+                    <tr>
+                        <td>{{item.forum_id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.description}}</td>
+                        <td>{{item.created_date}}</td>
+                        <td>{{item.status}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

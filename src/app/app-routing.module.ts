@@ -5,6 +5,7 @@ import { AboutUsComponent } from './modules/pages/about-us/about-us.component';
 import { ActionLinesComponent } from './modules/pages/action-lines/action-lines.component';
 import { BlogComponent } from './modules/pages/blog/blog.component';
 import { ContactComponent } from './modules/pages/contact/contact.component';
+import { ForumWebComponent } from './modules/pages/forum-web/forum-web.component';
 import { HomeComponent } from './modules/pages/home/home.component';
 import { JobsComponent } from './modules/pages/jobs/jobs.component';
 import { LoginComponent } from './modules/pages/login/login.component';
@@ -28,7 +29,8 @@ const routes: Routes = [
       { path: 'jobs', component: JobsComponent },
       { path: 'blog', component: BlogComponent },
       { path: 'contact', component: ContactComponent },
-      { path: 'login', component: LoginComponent }
+      { path: 'login', component: LoginComponent },
+      { path: 'forum', component: ForumWebComponent },
     ]
   },
   {
